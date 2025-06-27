@@ -1,0 +1,55 @@
+body {
+    background-color: black;
+    color: tomato;
+}
+
+/* Estilo para la cuadrícula de miniaturas */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Estilo del botón de navegación en el modal */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1050;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+.btn.close {
+    filter: invert(1);
+}
+
+.modal-content {
+    background-color: black;
+    border: 2px solid rgb(102, 2, 2);
+    box-shadow: 0 0 20px #ff4d4d;
+    /* Brillo rojizo alrededor del modal */
+    transition: box-shadow 0.3s ease;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+/* Color del botón de cerrar (X) dentro del modal */
+/* .modal-header .btn-close {
+  filter: invert(1); /* Hace que la X aparezca blanca */
+/* } */
