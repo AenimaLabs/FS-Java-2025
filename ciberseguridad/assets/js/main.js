@@ -1,46 +1,49 @@
 // main.js
 
 $(document).ready(function () {
-//   // Ejemplo de efecto al hacer clic en una tarjeta
-//   $(".card").click(function () {
-//     $(this).toggleClass("border-primary");
-//   });
 
-//   // Validación del formulario
-//   $("#form-contacto").on("submit", function (e) {
-//     const email = $("#email").val();
-//     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-//     if (!regexEmail.test(email)) {
-//       e.preventDefault();
-//       alert("Por favor, ingresa un correo válido.");
-//     }
-//   });
-
-//   // Mostrar acordeón al hacer clic en el botón
- // Al hacer clic en el botón, mostrar el acordeón con efecto fade
+    // Mostrar acordeón al hacer clic en el botón
+    // Al hacer clic en el botón, mostrar el acordeón con efecto fade
     $('#mostrarAcordeon').on('click', function (e) {
-      e.preventDefault(); // Evitar comportamiento por defecto del enlace
-      $('#seccion-acordeon').fadeIn(500); // Mostrar acordeón
-      $('html, body').animate({
-        scrollTop: $('#seccion-acordeon').offset().top - 60
-      }, 1000); // Scroll suave hacia el acordeón
+        e.preventDefault(); // Evitar comportamiento por defecto del enlace
+        $('#seccion-acordeon').fadeIn(500); // Mostrar acordeón
+        $('html, body').animate({
+            scrollTop: $('#seccion-acordeon').offset().top - 60
+        }, 1000); // Scroll suave hacia el acordeón
     });
 
-
+    // Scroll suave al navbar al hacer clic en "Subir"
+    //no se desplaza lo suficiente en la versión móvil, no sé por qué
     $('#subiralnav').on('click', function (e) {
-      e.preventDefault();
-      $('html, body').animate({
-        scrollTop: $('#barra-nav').offset().top
-      }, 1000);
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#barra-nav').offset().top
+        }, 1000);
     });
 });
 
+// Validación del formulario usando Bootstrap
+(() => {
+  'use strict';
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', event => {
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    } else {
+      alert("Formulario enviado correctamente.");
+    }
+    form.classList.add('was-validated');
+  }, false);
+})();
+
+// Función del modal del test
 function mostrarResultado() {
   const respuesta = document.getElementById("pregunta1").value;
   if (respuesta === "correcta") {
-    alert("¡Correcto! Usar un gestor de contraseñas es seguro.");
+    alert("¡Correcto! Nunca debes compartir información sensible por correo.");
   } else {
-    alert("Incorrecto. Usa siempre un gestor de contraseñas.");
+    alert("Incorrecto. No debes responder ni hacer clic en enlaces sospechosos.");
   }
 }

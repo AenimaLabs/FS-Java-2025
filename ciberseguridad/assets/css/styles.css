@@ -74,10 +74,27 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.list-group-item {
+.list-group {
+    background-color: #1F2937;
+    color: #FAFAFA;
+    /* Fondo oscuro para la lista */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item, .modal-content {
     background-color: #374151;
     color: #FAFAFA;
     /* border: none; */
+    
+}
+
+#formulario, #boton-test{
+    background-color: #374151;
+    color: #FAFAFA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
