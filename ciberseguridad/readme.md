@@ -23,7 +23,6 @@ Este sitio web está diseñado para educar sobre conceptos básicos de cibersegu
 - Carrusel y acordeón
 - Formulario con validación
 - Modal interactivo
-- Tarjetas interactivas
 
 ## 👤 Autor
 
