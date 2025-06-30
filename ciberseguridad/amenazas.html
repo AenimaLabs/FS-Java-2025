@@ -1,169 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amenazas Cibernéticas</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amenazas Cibernéticas</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-  <!-- jQuery UI para acordeón (Opcional) -->
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css ">
-
-  <!-- Estilos personalizados -->
-  <!-- <style>
-    .card:hover {
-      background-color: #f8f9fa;
-      transition: background-color 0.3s ease;
-    }
-
-    .carousel-caption {
-      bottom: 1rem;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 0.5rem;
-      border-radius: 5px;
-    }
-  </style> -->
-</head>
-<body>
-
-  <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">CiberSeguridad</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="amenazas.html">Amenazas</a></li>
-          <li class="nav-item"><a class="nav-link" href="consejos.html">Consejos</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Sección principal -->
-  <main class="container my-5">
-    <h2 class="mb-4 text-center">Tipos de Amenazas Cibernéticas</h2>
-
-    <!-- Tarjetas interactivas -->
-    <section class="row g-4">
-
-      <!-- Phishing -->
-      <article class="col-md-6">
-        <div class="card border-danger h-100">
-          <div class="card-body">
-            <h5 class="card-title">Phishing</h5>
-            <p class="card-text">Técnicas engañosas para obtener información sensible como contraseñas o números de tarjeta.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Ransomware -->
-      <article class="col-md-6">
-        <div class="card border-warning h-100">
-          <div class="card-body">
-            <h5 class="card-title">Ransomware</h5>
-            <p class="card-text">Software malicioso que cifra tus archivos exigiendo un rescate para desbloquearlos.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Malware -->
-      <article class="col-md-6">
-        <div class="card border-secondary h-100">
-          <div class="card-body">
-            <h5 class="card-title">Malware</h5>
-            <p class="card-text">Programas diseñados para dañar sistemas, robar datos o acceder sin autorización.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- DDoS -->
-      <article class="col-md-6">
-        <div class="card border-success h-100">
-          <div class="card-body">
-            <h5 class="card-title">DDoS</h5>
-            <p class="card-text">Ataques que saturan servidores con tráfico falso para caer el servicio web.</p>
-          </div>
-        </div>
-      </article>
-
-    </section>
-
-    <!-- Carrusel de casos reales -->
-    <section class="mt-5">
-      <h3 class="mb-3">Ejemplos Reales</h3>
-      <div id="carouselEjemplos" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center align-items-center bg-light p-4 rounded shadow-sm">
-              <p class="text-center m-0">El ataque WannaCry en 2017 afectó a más de 200,000 computadoras en 150 países.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center align-items-center bg-light p-4 rounded shadow-sm">
-              <p class="text-center m-0">En 2016, Dyn fue víctima de un ataque DDoS masivo que dejó fuera del aire Twitter, Netflix y Spotify.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center align-items-center bg-light p-4 rounded shadow-sm">
-              <p class="text-center m-0">El phishing dirigido a empleados de LinkedIn en 2022 permitió el robo de millones de perfiles profesionales.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEjemplos" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav
+      id="barra-nav"
+      class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">🛡️ CiberSeguridad</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselEjemplos" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="amenazas.html"
+                >Amenazas</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="consejos.html">Consejos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <main class="container my-5">
+      <h2 class="mb-4 text-center">Tipos de Amenazas Cibernéticas</h2>
+
+      <!-- Tarjetas interactivas -->
+      <section class="row g-4">
+        <!-- Phishing -->
+        <article class="col-md-6">
+          <div class="card border-danger h-100">
+            <div class="card-body">
+              <h5 class="card-title">Phishing</h5>
+              <p class="card-text">
+                Técnicas engañosas para obtener información sensible como
+                contraseñas o números de tarjeta.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ransomware -->
+        <article class="col-md-6">
+          <div class="card border-danger h-100">
+            <div class="card-body">
+              <h5 class="card-title">Ransomware</h5>
+              <p class="card-text">
+                Software malicioso que cifra tus archivos exigiendo un rescate
+                para desbloquearlos.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Malware -->
+        <article class="col-md-6">
+          <div class="card border-danger h-100">
+            <div class="card-body">
+              <h5 class="card-title">Malware</h5>
+              <p class="card-text">
+                Programas diseñados para dañar sistemas, robar datos o acceder
+                sin autorización.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- DDoS -->
+        <article class="col-md-6">
+          <div class="card border-danger h-100">
+            <div class="card-body">
+              <h5 class="card-title">DDoS</h5>
+              <p class="card-text">
+                Ataques que saturan servidores con tráfico falso para caer el
+                servicio web.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Carrusel de casos reales -->
+      <section id="carruselO" class="mt-5">
+        <h3 class="mb-3">Ejemplos Reales</h3>
+        <div
+          id="carouselEjemplos"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                class="d-flex justify-content-center align-items-center p-4 rounded colores-carrusel shadow-sm"
+              >
+                <p class="text-center m-0">
+                  El ataque WannaCry en 2017 afectó a más de 200,000
+                  computadoras en 150 países.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="d-flex justify-content-center align-items-center p-4 rounded colores-carrusel shadow-sm"
+              >
+                <p class="text-center m-0">
+                  En 2016, Dyn fue víctima de un ataque DDoS masivo que dejó
+                  fuera del aire Twitter, Netflix y Spotify.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="d-flex justify-content-center align-items-center p-4 rounded colores-carrusel shadow-sm"
+              >
+                <p class="text-center m-0">
+                  El phishing dirigido a empleados de LinkedIn en 2022 permitió
+                  el robo de millones de perfiles profesionales.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselEjemplos"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselEjemplos"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="text-center mt-5">
+        <button href="#barra-nav" class="btn btn-outline-light" id="subiralnav">
+          Subir
         </button>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Acordeón interactivo con jQuery UI (Opcional) -->
-    <section class="mt-5">
-      <h3 class="mb-3">Más Información sobre Amenazas</h3>
-      <div id="accordion">
-        <div>
-          <h5>¿Qué es un virus informático?</h5>
-          <div><p>Un programa malicioso que se replica y puede infectar otros archivos o sistemas.</p></div>
-        </div>
-        <div>
-          <h5>¿Cómo funciona el ransomware?</h5>
-          <div><p>Cifra tus archivos y exige pago, normalmente en criptomonedas, para recuperar el acceso.</p></div>
-        </div>
-        <div>
-          <h5>¿Qué hacer si sospechas de phishing?</h5>
-          <div><p>No hagas clic en enlaces sospechosos y verifica siempre la dirección del remitente.</p></div>
-        </div>
-      </div>
-    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <p class="mb-0">
+        &copy; 2025 CiberSeguridad. Todos los derechos reservados.
+      </p>
+    </footer>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p class="mb-0">&copy; 2025 Ciberseguridad Educativa</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js "></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js "></script>
-
-  <!-- Inicializar acordeón -->
-  <script>
-    $(function () {
-      $("#accordion").accordion({
-        collapsible: true,
-        heightStyle: "content"
-      });
-    });
-  </script>
-
-</body>
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js "></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

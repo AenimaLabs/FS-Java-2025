@@ -26,6 +26,14 @@ $(document).ready(function () {
         scrollTop: $('#seccion-acordeon').offset().top - 60
       }, 1000); // Scroll suave hacia el acordeón
     });
+
+
+    $('#subiralnav').on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $('#barra-nav').offset().top
+      }, 1000);
+    });
 });
 
 function mostrarResultado() {

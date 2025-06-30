@@ -9,48 +9,88 @@
   padding: 10px;
   border-radius: 5px;
 } */
-html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
-  background-color: #000;
-  color: #FAFAFA;
+    background-color: #1F2937;
+    color: #FAFAFA;
 }
 
 main {
-  flex: 1;
+    flex: 1;
 }
 
 .btn-outline-light:hover {
-      background-color: black;
-      color: #67E8F9;
+    background-color: #1F2937;
+    color: #67E8F9;
+}
+
+
+
+/* Estilos para el acordeón */
+.accordion-button {
+    background-color: #374151;
+    color: #FAFAFA;
+    /* Texto blanco */
+}
+
+.accordion-button:hover {
+    background-color: #67E8F9;
+    /* al hacer hover */
+    color: #1F2937;
+    /* al hacer hover */
+}
+
+.accordion-item {
+    background-color: #67E8F9;
+    /* Fondo oscuro para el acordeón */
+
+}
+
+.accordion-body {
+    background-color: #1F2937;
+    /* Fondo ligeramente más claro para el contenido */
+    color: #FAFAFA;
+    /* Texto blanco para el contenido */
+}
+
+.card-body {
+    background-color: #374151;
+    color: #FAFAFA;
+}
+
+.colores-carrusel {
+    background-color: #1F2937;
+    color: #FAFAFA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item {
+    background-color: #374151;
+    color: #FAFAFA;
+    /* border: none; */
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #carruselO {
+        display: none;
     }
 
- /* Estilos para el acordeón */
-    .accordion-button {
-        background-color: #374151;
-      color: #FAFAFA; /* Texto blanco */
-    }
+}
 
-    .accordion-button:hover {
-      background-color: #67E8F9; /* al hacer hover */
-      color: #1F2937; /* al hacer hover */
-    }
-
-    .accordion-item {
-      background-color: #67E8F9; /* Fondo oscuro para el acordeón */
-      
-    }
-
-    .accordion-body {
-      background-color: #1F2937; /* Fondo ligeramente más claro para el contenido */
-      color: #FAFAFA; /* Texto blanco para el contenido */
-    }
 /*
 a {
   color:darkred;
