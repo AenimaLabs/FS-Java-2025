@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ciberseguridad - Inicio</title>
+
+  <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: url(' https://images.unsplash.com/photo-1611735956488-53f79f2d8014?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      padding: 100px 0;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    .hero-section h1 {
+      font-weight: 700;
+    }
+
+    .btn-outline-light:hover {
+      background-color: #fff;
+      color: #007bff;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 60px 0;
+      }
+
+      .display-4 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Efecto hover en acordeón */
+    .accordion-button:hover {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🛡️ CiberSeguridad</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Amenazas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Consejos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección destacada -->
+  <header class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4">Protege tu mundo digital</h1>
+      <p class="lead mt-3">Aprende a defender tus datos contra amenazas cibernéticas reales.</p>
+      <a href="#" class="btn btn-outline-light btn-lg mt-4">Descubre más</a>
+    </div>
+  </header>
+
+  <!-- Contenido introductorio -->
+  <main class="container my-5">
+    <section class="text-center">
+      <h2 class="mb-4">¿Qué es la ciberseguridad?</h2>
+      <p class="lead">
+        La ciberseguridad es el conjunto de técnicas, herramientas y prácticas diseñadas para proteger los sistemas,
+        redes y datos frente a ataques, daños o accesos no autorizados.
+      </p>
+    </section>
+
+    <!-- Acordeón interactivo -->
+    <section class="mt-5">
+      <h3 class="mb-3">Beneficios de la ciberseguridad</h3>
+      <div id="accordion" class="accordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              Protección de datos personales
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+            <div class="accordion-body">
+              Evita que información sensible como contraseñas, correos o datos financieros sean robados.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Prevención de fraudes
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div class="accordion-body">
+              Ayuda a identificar y bloquear intentos de suplantación de identidad y otros tipos de fraude digital.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              Confianza en línea
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div class="accordion-body">
+              Al mantener tu entorno digital seguro, aumentas la confianza al usar plataformas online.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">&copy; 2025 CiberSeguridad. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src=" https://code.jquery.com/jquery-3.7.1.min.js "></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap @5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // Ejemplo de animación simple al hacer clic en botón
+      $('a[href="#"]').on('click', function (e) {
+        e.preventDefault();
+        $('.accordion').fadeOut(300, function () {
+          $(this).fadeIn(300);
+        });
+      });
+
+      // Mostrar mensaje cuando se expande un acordeón
+      $('.accordion-button').on('click', function () {
+        const title = $(this).text().trim();
+        console.log("Se ha abierto la sección: " + title);
+      });
+    });
+  </script>
+
+</body>
+</html>
