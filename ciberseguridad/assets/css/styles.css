@@ -1,0 +1,11 @@
+.card:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.carousel-caption {
+  bottom: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
