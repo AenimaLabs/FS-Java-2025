@@ -1,4 +1,4 @@
-.card:hover {
+/* .card:hover {
   background-color: #f8f9fa;
   cursor: pointer;
 }
@@ -8,4 +8,106 @@
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 5px;
+} */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+body {
+  background-color: #000;
+  color: #FAFAFA;
+}
+
+main {
+  flex: 1;
+}
+
+.btn-outline-light:hover {
+      background-color: black;
+      color: #67E8F9;
+    }
+
+ /* Estilos para el acordeón */
+    .accordion-button {
+        background-color: #374151;
+      color: #FAFAFA; /* Texto blanco */
+    }
+
+    .accordion-button:hover {
+      background-color: #67E8F9; /* al hacer hover */
+      color: #1F2937; /* al hacer hover */
+    }
+
+    .accordion-item {
+      background-color: #67E8F9; /* Fondo oscuro para el acordeón */
+      
+    }
+
+    .accordion-body {
+      background-color: #1F2937; /* Fondo ligeramente más claro para el contenido */
+      color: #FAFAFA; /* Texto blanco para el contenido */
+    }
+/*
+a {
+  color:darkred;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0ff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0f0;
+}
+
+.btn-outline-light {
+  color: #0f0;
+  border-color: #0f0;
+}
+
+.btn-outline-light:hover {
+  background-color: #0f0;
+  color: #000;
+}
+
+.card {
+  background-color: #000;
+  border: 1px solid #0f0;
+  color: #0f0;
+}
+
+.card:hover {
+  background-color: #030;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.carousel-caption {
+  bottom: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(1, 68, 1);
+}
+
+.form-control,
+.form-select {
+  background-color: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #000;
+  color: #0f0;
+  box-shadow: 0 0 5px #0f0;
+}
+
+.modal-content {
+  background-color: #000;
+  color: #0f0;
+} */
